@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <title>Currency Exchange</title>
+</head>
+<body>
+    <header>
+        <h1>Currency Exchange </h1>
+    </header>
+    <main>
+        <div id="canvas-container">
+            <canvas id="chart"></canvas>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="currency-input-container">
+            <div id="from">
+                <p id="import-currency">I have</p>
+                <div class="currency-select">
+                    <p class="standard-select">Select a currency</p>
+                    <p class="select-arrow">▼</p>
+                </div>
+                <div class="options-container"></div>
+                <div class="currency-container">
+                    <input class="currency-input" type="number"></input>
+                    <h3></h3>
+                </div>
+            </div>
+            <div id="swap-container">
+                <div id="swap">
+                    <img src="asset/img/icons8-aggiorna.svg">
+                </div>
+            </div>
+            <div id="to">
+                <p id="convert-currency">I want to buy</p>
+                <div class="currency-select">
+                    <p class="standard-select">Select a currency</p>
+                    <p class="select-arrow">▼</p>
+                </div>
+                <div class="options-container"></div>
+                <div class="currency-container">
+                    <input class="currency-input" type="number"></input>
+                    <h3></h3>
+                </div>
+            </div>
+        </div>
+    </footer>
+        <script src="js/script.js"></script>
+    </body>
+</html>

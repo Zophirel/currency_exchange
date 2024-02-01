@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+html{
+    margin: 0;
+}
+
+body{
+    background-color:#2B2E44;
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+}
+
+header {
+    text-align: center;
+    grid-area: header;
+    padding: 20px;
+}
+
+header > h1 {
+    color: #70EEDF;
+}
+
+main {
+    grid-area: main;
+}
+
+#canvas-container {
+    display: flex;
+    max-height: 340px;
+    width: 100%;
+    height: 0vw;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 350;
+}
+
+canvas {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+}
+
+.currency-input-container{
+    display: grid;
+    grid-template-areas:
+        "from swap to";
+}
+
+.currency-container > h3 {
+    margin: 0;
+    margin-top: 10px;
+    margin-left: 8px;
+    font-weight: 400;
+    color: white;
+    display: none;
+}
+
+#from, #to, #swap-container{
+    display: flex;
+    flex-direction: column;
+    background-color: #2E3247;
+    justify-content: center;
+    padding: 20px;
+}
+
+#from{
+    grid-area: from;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#to {
+    grid-area: to;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#import-currency, #convert-currency{
+    font-weight: bold;
+    color: white;
+}
+
+.currency-select {
+    margin-bottom: 20px;
+    background-color: #2E3247;
+    border-radius: 5px;
+    border: 2px solid #3e4259;
+    height: 40px;
+    display: grid;
+    grid-auto-flow: column;
+    align-content: center;
+}
+
+.currency-select:hover, .currency-select:focus {
+    border: 2px solid #70EEDF;
+}
+
+.currency-select {
+    font-weight: bold;
+    color: white;
+}
+
+.currency-select > img {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.standard-select {
+    align-self: center;
+    font-weight: 600;
+    color: white;
+    justify-self: end;
+}
+
+.select-arrow {
+    justify-self: end;
+    font-weight: 600;
+    color: white;
+    align-self: center;
+    margin-right: 20px;
+}
+
+.options-container {
+    background-color: #2E3247;
+    border-radius: 5px;
+    border: 2px solid #3e4259;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+    height: 100px;
+    display: none;
+}
+
+.options-container > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 10;
+}
+
+.option {
+    list-style: none;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+
+.option:hover {
+    background-color: #3e4259;
+}
+
+.option > p {
+    display: inline;
+    margin: 0;
+    position: relative;
+    bottom: 4px;
+    left: 10px;
+}
+
+.currency-container{
+    border: 2px solid #3e4259;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.currency-input{
+    outline: none;
+    border: 0;
+    background-color: #2E3247;
+    width: 100%;
+    height: 80px;
+    font-size: 60px;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.currency-container:focus-within {
+    border: 2px solid #70EEDF;
+}
+
+.currency-container:hover {
+    border: 2px solid #70EEDF;
+}
+
+#swap {
+    width: 50px;
+    height: 50px;
+    background-color: #3e4259;
+    border-radius: 10px;
+    margin-top: 100px;
+    display: flex;
+}
+
+#swap > img {
+    margin: 0 auto;
+}
+
+.flag {
+    height: 20px;
+    width: 20px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+@media screen and (max-width: 600px) {
+    .currency-input-container{
+        display: grid;
+        grid-template-areas:
+            "from"
+            "swap" 
+            "to";
+    }
+
+    #from{
+        grid-area: from;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    #swap {
+        width: 50px;
+        height: 50px;
+        background-color: #3e4259;
+        border-radius: 10px;
+        margin-top: 0px; 
+        display: flex;
+        align-self: center;
+    }
+    
+    #to {
+        grid-area: to;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    #canvas-container {
+        display: flex;
+        max-height: 340px;
+        height: 0vw;
+        padding: 0px;
+        justify-content: center;
+        position: static;
+
+    }
+    
+    footer {
+        grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        padding: 20px;
+        position: relative;
+    }
+}
