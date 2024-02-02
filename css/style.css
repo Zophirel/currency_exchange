@@ -231,8 +231,8 @@ input::-webkit-inner-spin-button {
 
     #from{
         grid-area: from;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        border-radius: 10px 10px 0 0;
+
     }
     
     #swap {
@@ -247,8 +247,7 @@ input::-webkit-inner-spin-button {
     
     #to {
         grid-area: to;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-radius: 0 0 10px 10px;
     }
 
     #canvas-container {
