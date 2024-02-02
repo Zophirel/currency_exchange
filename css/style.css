@@ -24,11 +24,14 @@ main {
     grid-area: main;
 }
 
-#canvas-container {
+.show-chart {
+    height: 45vw;
+}
+
+.canvas-container {
     display: flex;
     max-height: 340px;
     width: 100%;
-    height: 0vw;
     padding: 0px;
     justify-content: center;
     align-items: center;
@@ -220,7 +223,25 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
-@media screen and (max-width: 600px) {
+
+@media screen and (max-height: 760px) and (min-width: 1024px) {
+    header {
+        text-align: left;
+        margin: 0;
+        padding: 10px;
+    }
+    header > h1 {
+        font-size: 20px;
+    }
+
+    .canvas-container {
+        height: 20vw;
+    }
+}
+
+
+
+@media screen and (max-width: 600px){
     .currency-input-container{
         display: grid;
         grid-template-areas:
@@ -250,10 +271,9 @@ input::-webkit-inner-spin-button {
         border-radius: 0 0 10px 10px;
     }
 
-    #canvas-container {
+    .canvas-container {
         display: flex;
         max-height: 340px;
-        height: 0vw;
         padding: 0px;
         justify-content: center;
         position: static;

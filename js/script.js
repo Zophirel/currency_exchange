@@ -178,7 +178,7 @@
         
         //check from which of the two currencySelect element has been used to select currency
         let fromOrTo = target.parentNode.parentNode.parentNode.id;
-        let canvasContainer = document.getElementById("canvas-container");
+        let canvasContainer = document.getElementsByClassName("canvas-container")[0];
         
         if(fromOrTo == "from"){
             replaceSelectedCurrency(firstCurrencySelect, target);
@@ -198,7 +198,7 @@
         
         //when both currencies are set show the conversion rate with an h3 inside of both [currency_container]
         if(getFirstConversionRate() != undefined){ 
-            canvasContainer.style.height = "45vw";
+            canvasContainer.className = "canvas-container show-chart";
      
             console.log("not undefined");
             await setConversionGraph();
