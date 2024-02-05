@@ -38,20 +38,6 @@ The web app provides a user-friendly interface for converting currencies and exp
 ## Demo
 You can try the app by visiting the following link: [Currency Exchange App](https://currexch.netlify.app "link")
 
-## How to Use
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/your-username/currency-exchange-web-app.git
-```
-
-1. Open the `index.html` file in a web browser.
-
-2. Use the interface to select currencies, input amounts, and view exchange rates.
-
-3. Explore historical exchange rate trends using the interactive chart.
-
 ## Dependencies
 
 - [Chart.js](https://www.chartjs.org/) - Used for creating interactive charts.
